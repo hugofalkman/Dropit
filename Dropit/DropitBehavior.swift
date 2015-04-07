@@ -18,21 +18,31 @@ class DropitBehavior: UIDynamicBehavior {
         return lazyCollider
         }()
     
+    lazy var dropBehavior: UIDynamicItemBehavior = {
+        let lazyDropBehavior = UIDynamicItemBehavior()
+        lazyDropBehavior.allowsRotation = true
+        lazyDropBehavior.elasticity = 0.75
+        return lazyDropBehavior
+    }()
+    
     override init() {
         super.init()
         addChildBehavior(gravity)
         addChildBehavior(collider)
+        addChildBehavior(dropBehavior)
     }
     
     func addDrop(drop: UIView) {
         dynamicAnimator?.referenceView?.addSubview(drop)
         gravity.addItem(drop)
         collider.addItem(drop)
+        dropBehavior.addItem(drop)
     }
     
     func removeDrop(drop: UIView) {
         gravity.removeItem(drop)
         collider.removeItem(drop)
+        dropBehavior.removeItem(drop)
         drop.removeFromSuperview()
     }
 }
