@@ -13,6 +13,7 @@
 		B124115C1ACDB06F00AA3E96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B124115A1ACDB06F00AA3E96 /* LaunchScreen.xib */; };
 		B12411681ACDB06F00AA3E96 /* DropitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12411671ACDB06F00AA3E96 /* DropitTests.swift */; };
 		B12411741ACDB14B00AA3E96 /* DropitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12411731ACDB14B00AA3E96 /* DropitViewController.swift */; };
+		B14B5C1D1AD3F1E900194712 /* DropitBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14B5C1C1AD3F1E900194712 /* DropitBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		B12411661ACDB06F00AA3E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B12411671ACDB06F00AA3E96 /* DropitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropitTests.swift; sourceTree = "<group>"; };
 		B12411731ACDB14B00AA3E96 /* DropitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropitViewController.swift; sourceTree = "<group>"; };
+		B14B5C1C1AD3F1E900194712 /* DropitBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropitBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				B12411731ACDB14B00AA3E96 /* DropitViewController.swift */,
+				B14B5C1C1AD3F1E900194712 /* DropitBehavior.swift */,
 				B12411551ACDB06F00AA3E96 /* Main.storyboard */,
 				B124114F1ACDB06F00AA3E96 /* Supporting Files */,
 			);
@@ -214,6 +217,7 @@
 			files = (
 				B12411741ACDB14B00AA3E96 /* DropitViewController.swift in Sources */,
 				B12411521ACDB06F00AA3E96 /* AppDelegate.swift in Sources */,
+				B14B5C1D1AD3F1E900194712 /* DropitBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +411,7 @@
 				B124116D1ACDB06F00AA3E96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B124116E1ACDB06F00AA3E96 /* Build configuration list for PBXNativeTarget "DropitTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				B12411701ACDB06F00AA3E96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
