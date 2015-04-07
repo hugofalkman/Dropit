@@ -12,7 +12,7 @@ class DropitViewController: UIViewController, UIDynamicAnimatorDelegate {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var gameView: UIView!
+    @IBOutlet weak var gameView: BezierPathsView!
     
     // MARK: - Animation
     
@@ -24,11 +24,20 @@ class DropitViewController: UIViewController, UIDynamicAnimatorDelegate {
     
     let dropitBehavior = DropitBehavior()
     
-    // MARK: - View Controller Lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         animator.addBehavior(dropitBehavior)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let barrierSize = dropSize
+        let barrierOrigin = CGPoint(x: gameView.bounds.midX - barrierSize.width/2, y: gameView.bounds.midY - barrierSize.height/2)
+        let path = UIBezierPath(ovalInRect: CGRect(origin: barrierOrigin, size: barrierSize))
+        dropitBehavior.addBarrier(path, named: PathNames.MiddleBarrier)
+        gameView.setPath(path, named: PathNames.MiddleBarrier)
     }
 
     // MARK: - UIDynamicAnimatorDelegate
@@ -96,7 +105,9 @@ class DropitViewController: UIViewController, UIDynamicAnimatorDelegate {
     }
     
     // MARK: - Constants
-    
+    struct PathNames {
+        static let MiddleBarrier = "Middle Barrier"
+    }
 }
 
 // MARK: - Extensions
